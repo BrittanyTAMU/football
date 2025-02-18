@@ -1,0 +1,310 @@
+/* css for forms */
+#textImageFormContainer{
+  display: none;
+  margin-right: 80px;
+}
+
+#emailFormContainer{
+  display: none;
+}
+
+/* website css from  https://codepen.io/jgreen721/pen/GRbPjgR --> */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(rgb(15, 15, 10), rgb(25, 20, 25));
+}
+
+.draftkings-ad {
+  height: 275px;
+  /* border: 2px solid black; */
+  width: 100%;
+  max-width: 1200px; /* Optional: Set a max-width for better responsiveness */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.ad-card {
+  /* border: 2px solid white; */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.field-border {
+  width: 4px;
+  height: 100%;
+  /* background: white; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  /* overflow: hidden; */
+  /* border: 2px solid red; */
+}
+
+.border-left {
+  animation: scrollfield 5s linear infinite;
+}
+
+@keyframes scrollfield {
+  100% {
+    transform: translateY(50%);
+  }
+}
+.ten-yards {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.up-field {
+  transform: translateY(-100%);
+}
+
+.down-field {
+  transform: translateY(100%);
+}
+
+/* .football {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: scale(0.65, 0.75) rotate(5deg);
+  box-shadow: 4px 10px 25px rgba(25, 25, 20, 0.5) inset,
+    5px -12px 12px rgba(15, 5, 20, 0.65) inset;
+  background: rgb(95, 70, 37);
+  border-radius: 50%;
+  width: 250%;
+  left: -75%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.25s ease;
+} */
+
+@keyframes spiral {
+  100% {
+    transform: rotateX(1800deg) scale(0.65, 0.85);
+  }
+}
+
+.football::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgb(43, 30, 2);
+  opacity: 25%;
+  filter: blur(45px);
+}
+
+.football::before {
+  content: "";
+  position: absolute;
+  width: 225px;
+  height: 35px;
+  left: 5rem;
+  bottom: 0rem;
+  background: rgb(255, 255, 255);
+  opacity: 25%;
+  transform: rotate(25deg);
+  filter: blur(25px);
+  /* filter: saturate(20px); */
+}
+
+.laces {
+  width: 200px;
+  height: 6px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transform: translateY(-4rem);
+}
+
+.lace {
+  height: 30px;
+  width: 6px;
+  background: white;
+}
+
+.top-header-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-header-text-container h1 {
+  background-image: linear-gradient(rgb(2, 80, 2), lightgreen);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  position: relative;
+  z-index: 5;
+}
+
+.bottom-header-text-container h1 {
+  background-image: linear-gradient(rgb(225, 235, 235), rgb(135, 145, 135));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  position: relative;
+  z-index: 5;
+}
+
+h1 {
+  font-size: 4.2rem;
+  line-height: 3.8rem;
+}
+
+.long {
+  width: 65px;
+  height: 4px;
+  background: white;
+  position: relative;
+}
+
+.short {
+  width: 35px;
+  height: 4px;
+  background: white;
+  position: relative;
+}
+
+.long::after,
+.short::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 50px;
+  width: 4px;
+  background: white;
+}
+
+.border-right {
+  transform: rotate(180deg);
+  animation: scrollfieldright 5s linear infinite;
+}
+
+@keyframes scrollfieldright {
+  100% {
+    transform: translateY(50%) rotate(180deg);
+  }
+}
+
+
+
+/* VITE CSS */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vanilla:hover {
+  filter: drop-shadow(0 0 2em #f7df1eaa);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
