@@ -5,7 +5,7 @@ import { Client, Databases, ID, Storage, Account } from "appwrite";
 
 const client = new Client()
     .setEndpoint('https://cloud.appwrite.io/v1')
-    .setProject('67b0c914000506f200ee')// // Replace with your project ID
+    .setProject('import.meta.env.VITE_APPWRITE_PROJECT_ID')// // Replace with your project ID
  
 
 const databases = new Databases(client);//from AW Docs
